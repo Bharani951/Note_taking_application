@@ -12,13 +12,15 @@ const app = express();
 
 const port = process.env.PORT || 5001;
 connectDB();
-//middleware
-app.use(express.json());
-
-app.use((req, res, next) => {
-  console.log("we just got the new req");
-  next();
-});
+//middleware- before sending the response we need to send the request to the body
+app.use(express.json()); // this middleware parses incoming JSON requests and puts the parsed data in req.body
+// to send the message of what we are going to do with the API in the postman
+// custom middleware
+// app.use((req, res, next) => {
+//   console.log(`Req method is ${req.method}& Req URL is ${req.url}`);
+//   next();
+// });
+app.use(rateLimiter);
 
 app.use("/api/notes", notesRoutes);
 
