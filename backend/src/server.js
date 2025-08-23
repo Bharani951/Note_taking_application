@@ -3,6 +3,7 @@ import notesRoutes from "./routes/notesRoutes.js"; // Importing the notes routes
 // const express = require("express"); // using CommonJS syntax
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
+import rateLimiter from "./middleware/rateLimiter.js";
 
 dotenv.config();
 
@@ -11,7 +12,7 @@ console.log(process.env.MONGO_URI);
 const app = express();
 
 const port = process.env.PORT || 5001;
-connectDB();
+
 //middleware- before sending the response we need to send the request to the body
 app.use(express.json()); // this middleware parses incoming JSON requests and puts the parsed data in req.body
 // to send the message of what we are going to do with the API in the postman
@@ -24,6 +25,9 @@ app.use(rateLimiter);
 
 app.use("/api/notes", notesRoutes);
 
-app.listen(port, () => {
-  console.log("Server is running on port:", port);
+// first connect to the DB first and then start connecting to the port
+connectDB().then(() => {
+  app.listen(port, () => {
+    console.log("Server is running on port:", port);
+  });
 });
