@@ -166,4 +166,3 @@ Please follow the existing code style and add tests for new features when possib
 This project is licensed under the MIT License. Feel free to use, modify, or distribute.
 
 Feel free to adjust any section—especially the tech stack or scripts—to match your actual setup.
-::contentReference[oaicite:0]{index=0}
