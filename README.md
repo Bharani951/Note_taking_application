@@ -118,7 +118,8 @@ npm run dev
 yarn dev
 The app should now be running at http://localhost:5173.
 
-Available Scripts
+### Available Scripts
+
 In the frontend/ folder, you can run:
 
 npm run dev
@@ -133,18 +134,21 @@ Preview the production build locally.
 npm run lint
 Run ESLint to check for code style issues.
 
-Environment Variables
+### Environment Variables
+
 Variable Description Example
 VITE_API_BASE_URL Base URL for your backend API https://api.myapp.com/api
 VITE_AUTH_TOKEN_KEY localStorage key for auth tokens note_app_auth_token
 
-Deployment
+### Deployment
+
 Build the app
 
 npm run build
 Deploy the contents of dist/ to your static hosting provider (Netlify, Vercel, GitHub Pages, etc.).
 
-Contributing
+### Contributing
+
 Fork the repository
 
 Create a new branch (git checkout -b feature/my-feature)
@@ -157,7 +161,8 @@ Open a Pull Request
 
 Please follow the existing code style and add tests for new features when possible.
 
-License
+### License
+
 This project is licensed under the MIT License. Feel free to use, modify, or distribute.
 
 Feel free to adjust any section—especially the tech stack or scripts—to match your actual setup.
