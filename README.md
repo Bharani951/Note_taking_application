@@ -23,9 +23,11 @@ A single-page React application for creating, editing, organizing, and searching
 
 ## Demo
 
-> _(Add a link or screenshot here once you have a hosted preview)_ > ![alt text](image-1.png)
+![alt text](image-1.png)
 
----
+![alt text](image-2.png)
+
+## ![alt text](image-3.png)
 
 ## Key Features
 
