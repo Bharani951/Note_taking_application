@@ -1,0 +1,19 @@
+import { Route, Routes } from "react-router-dom"; // Add Route import here
+import './index.css';
+import CreatePage from "./pages/CreatePage";
+import HomePage from "./pages/HomePage";
+import NoteDetailPage from "./pages/NoteDetailPage";
+
+const App =()=>{
+  return (
+     <div className="relative h-full w-full">
+      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_60%,#d8b207_100%)]" />
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/note/:id" element={<NoteDetailPage />} />
+      <Route path="/create" element={<CreatePage />} />
+    </Routes>
+  </div>
+  );
+};
+export default App;
